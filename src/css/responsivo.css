@@ -1,7 +1,6 @@
 @media (max-width: 769px) {
   main::after {
-
-    width: 100vw;
+  width: 100vw;
   }
 
   main .personagem .imagem {
