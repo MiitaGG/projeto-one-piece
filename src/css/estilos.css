@@ -1,6 +1,6 @@
 body {
   background-color: #000000;
-  overflow: auto;
+  overflow: hidden;
 }
 
 main::after {
