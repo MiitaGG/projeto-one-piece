@@ -1,6 +1,54 @@
+/* Estilos padrão para desktop */
+main::after {
+  background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
+  width: 80vw;
+}
+
+main .personagem .imagem {
+  height: 100vh;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 390px;
+  z-index: 1;
+}
+
+.conteudo .nome-personagem {
+  font-size: 48px;
+}
+
+.conteudo .descricao {
+  line-height: 24px;
+}
+
+.botoes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao img {
+  border-radius: 50%;
+}
+
+/* Estilos para telas pequenas (769px e abaixo) */
 @media (max-width: 769px) {
   main::after {
-    background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
     width: 100vw;
   }
 
@@ -36,6 +84,7 @@
   }
 }
 
+/* Estilos para telas muito pequenas (425px e abaixo) */
 @media (max-width: 425px) {
   main .personagem .imagem {
     height: auto;
@@ -45,16 +94,73 @@
     width: 170px;
     height: 75px;
   }
+
   .conteudo {
     top: -30%;
   }
+
   .conteudo .nome-personagem {
     font-size: 24px;
   }
+
   .botoes {
     padding: 20px;
     top: -20%;
   }
+
+  .botoes .botao img {
+    max-width: 50px;
+  }
+}
+
+/* Estilos para telas extremamente pequenas (375px e abaixo) */
+@media (max-width: 375px) {
+  .conteudo .nome-personagem {
+    font-size: 20px;
+  }
+
+  .conteudo .descricao {
+    font-size: 14px;
+  }
+
+  .botoes .botao img {
+    max-width: 40px;
+  }
+
+  .botoes {
+    padding: 15px;
+  }
+
+  .conteudo {
+    padding: 20px;
+  }
+}
+
+/* Estilos para telas de orientação vertical (portrait) */
+@media (orientation: portrait) {
+  .conteudo {
+    padding: 10px;
+  }
+
+  .botoes {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Estilos para telas de orientação horizontal (landscape) */
+@media (orientation: landscape) {
+  .conteudo {
+    padding: 20px;
+  }
+
+  .botoes {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px;
+  }
+}
 
   .botoes .botao img {
     max-width: 50px;
